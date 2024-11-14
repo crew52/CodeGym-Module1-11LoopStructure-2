@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate multiplication tables</title>
+</head>
+<body>
+<table id="result" border = 1px>
+
+</table>
+<script>
+    let string = "";
+    for (let i = 1; i < 10; i++) {
+        string += "<tr>"
+        for (let j = 2; j < 10; j++) {
+            string += "<td> " + j + ` *  ${i} = ` + (j * i) + "</td> ";
+        }
+        string += "</tr>"
+    }
+    document.getElementById("result").innerHTML = string;
+
+</script>
+</body>
+</html>
