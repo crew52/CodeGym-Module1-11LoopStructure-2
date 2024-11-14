@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice loop 02</title>
+</head>
+<body>
+<script>
+<!--  p1-->
+  let n = 20;
+  let a = 0, b = 1;
+  console.log("Dãy Fibonacci:");
+  console.log(a);
+  console.log(b);
+
+  for (let i = 2; i < n; i++) {
+    let next = a + b;
+    console.log(next);
+    a = b;
+    b = next;
+  }
+
+//   p2
+let h = 5;
+let factorial = 1;
+
+for (let i = 1; i <= h; i++) {
+  factorial *= i;
+}
+
+console.log(`Giai thừa của ${h} là: ${factorial}`);
+// p3
+let height = 5;
+console.log("Góc vuông ở góc dưới bên trái:");
+for (let i = 1; i <= height; i++) {
+  console.log('*'.repeat(i));
+}
+console.log("\nGóc vuông ở góc trên bên trái:");
+for (let i = height; i >= 1; i--) {
+  console.log('*'.repeat(i));
+}
+console.log("\nGóc vuông ở góc trên bên phải:");
+for (let i = height; i >= 1; i--) {
+  console.log(' '.repeat(height - i) + '*'.repeat(i));
+}
+// p4
+let width = 10;
+let heightt = 5;
+
+for (let i = 1; i <= heightt; i++) {
+  if (i === 1 || i === heightt) {
+    console.log('*'.repeat(width));
+  } else {
+    console.log('*' + ' '.repeat(width - 2) + '*');
+  }
+}
+//p5
+let principal = 1000000;
+let months = 12;
+let monthlyRate = 0.01;
+
+let totalAmount = principal * Math.pow(1 + monthlyRate, months);
+
+console.log(`Số tiền sau ${months} tháng là: ${totalAmount.toFixed(2)} VND`);
+// p6
+let size = 6;
+for (let i = size / 2; i <= size; i += 2) {
+  console.log(" ".repeat(size - i) + "*".repeat(i) + " ".repeat(size - i) + "*".repeat(i));
+}
+for (let i = size; i >= 1; i--) {
+  console.log(" ".repeat(size - i) + "*".repeat(i * 2 - 1));
+}
+
+</script>
+</body>
+</html>
