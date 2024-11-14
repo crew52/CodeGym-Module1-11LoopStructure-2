@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<script>
+<!--    1-->
+    for (let i = 2; i <= 20; i += 2) {
+        console.log(i);
+    }
+
+    //2
+    for (let i = 2; i <= 20; i++) {
+        if (i % 2 === 0){
+            console.log(i);
+        }
+    }
+//3
+    let count= 0;
+    for (let i = 2; i <= 100; i++) {
+        if (i % 2 === 0){
+            console.log(i);
+            count++;
+        }
+        if (count === 10) {
+            break;
+        }
+    }
+</script>
+</body>
+</html>
